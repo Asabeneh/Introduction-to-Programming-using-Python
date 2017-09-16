@@ -155,6 +155,16 @@ in Programming Exercise 2.14 to compute the area of a triangle.)"""
 -80.84312669999997 , 35.2270869
 
 """
+
+"""3.4 Geometry: area of a pentagon) The area of a pentagon can be computed using the
+following formula (s is the length of a side):
+Write a program that prompts the user to enter the side of a pentagon and displays
+the area. Here is a sample run:"""
+
+s = float(input("Enter the side:"))
+area = (5 * s ** 2)/(4 * math.tan(math.pi/5))
+print("The area of the pentaygon is", area)
+
 """*3.5 (Geometry: area of a regular polygon) A regular polygon is an n-sided polygon in
 which all sides are of the same length and all angles have the same degree (i.e., the
 polygon is both equilateral and equiangular). The formula for computing the area
@@ -164,26 +174,23 @@ number of sides and their length of a regular polygon and displays its area. Her
 a sample run:
 """
 
-
-
 n = int(input("Enter the nunber of sides:"))
 s = float(input("Enter the side length:"))
 
 area = (n * s ** 2)/(4 * math.tan(math.pi/n))
-
 print("The area of the polygon is", area)
 
-"""
-3.9 (Financial application: payroll) 
-Write a program that reads the following information
-and prints a payroll statement:
-Employee’s name (e.g., Smith)
-Number of hours worked in a week (e.g., 10)
-Hourly pay rate (e.g., 9.75)
-Federal tax withholding rate (e.g., 20%)
-State tax withholding rate (e.g., 9%)
-A sample run is shown below:
-"""
+#"""
+#3.9 (Financial application: payroll)
+#Write a program that reads the following information
+#and prints a payroll statement:
+#Employee’s name (e.g., Smith)
+#Number of hours worked in a week (e.g., 10)
+#Hourly pay rate (e.g., 9.75)
+#Federal tax withholding rate (e.g., 20%)
+#State tax withholding rate (e.g., 9%)
+#A sample run is shown below:
+#"""
 
 name = input("Enter employee's name::")
 hours = int(input("Enter number of hours worked in a week:"))
@@ -215,12 +222,11 @@ and displays the number in reverse order. Here is a sample run:"""
 number = input("Enter an integer:")
 digits = []
 for n in number:
-	digits.append(n)
+    digits.append(n)
 num = ""
 for i in range(len(digits)):
     num += digits[len(digits)-i-1]
 print(num)
-
 
 
 
