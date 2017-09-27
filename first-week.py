@@ -229,5 +229,132 @@ for i in range(len(digits)):
 print(num)
 
 
+"""4.7 (Financial application: monetary units) Modify Listing 3.4, ComputeChange.py,
+to display the nonzero denominations only, using singular words for single units
+such as 1 dollar and 1 penny, and plural words for more than one unit such as 2
+dollars and 3 pennies."""
+
+# Receive the amount
+amount = eval(input("Enter an amount, for example, 11.56: "))
+
+# Convert the amount to cents
+remainingAmount = int(amount * 100)
+
+# Find the number of one dollars
+numberOfOneDollars = remainingAmount // 100
+remainingAmount = remainingAmount % 100
+ # Find the number of quarters in the remaining amount
+numberOfQuarters = remainingAmount // 25
+remainingAmount = remainingAmount % 25
+
+# Find the number of dimes in the remaining amount
+numberOfDimes = remainingAmount // 10
+remainingAmount = remainingAmount % 10
+
+# Find the number of nickels in the remaining amount
+numberOfNickels = remainingAmount // 5
+remainingAmount = remainingAmount % 5
+
+# Find the number of pennies in the remaining amount
+numberOfPennies = remainingAmount
+
+# Display the results
+print("Your amount", amount, "consists of\n")
+if numberOfOneDollars > 1:
+    print(numberOfOneDollars, "dollars\n")
+else:
+    print(numberOfOneDollars, "dollar\n")
+    
+if numberOfQuarters > 1:
+    print(numberOfQuarters, "quarters\n")
+else:
+    print(numberOfQuarters, "quarter\n")
+    
+if numberOfDimes > 1:
+    print(numberOfDimes, "dimes\n")
+else:
+    print(numberOfDimes, "dime\n")
+    
+if numberOfNickels > 1:
+    print(numberOfNickels, "nickels\n")
+else:
+    print(numberOfNickels, "nickel\n")
 
 
+if numberOfPennies > 1:
+    print(numberOfPennies, "pennies")
+else:
+    print(numberOfPennies, "penny")
+    
+    
+"""*4.11 (Find the number of days in a month) Write a program that prompts the user to
+enter the month and year and displays the number of days in the month. For example,
+if the user entered month 2 and year 2000, the program should display that
+February 2000 has 29 days. If the user entered month 3 and year 2005, the program
+should display that March 2005 has 31 days."""
+
+month = eval(input("Enter the month:"))
+year = eval(input("Enter the year:"))
+
+if month == 1:
+    print("January",year, "has 31 days.")
+elif month ==2:
+    print("February",year, "has 28 days.")
+elif month ==3:
+    print("March",year, "has 31 days.")
+elif month ==4:
+    print("April",year, "has 29 days.")
+elif month ==5:
+    print("May",year, "has 30 days.")
+elif month ==6:
+    print("June",year, "has 31 days.")
+elif month ==7:
+    print("July",year, "has 31 days.")
+elif month ==8:
+    print("August",year, "has 31 days.")
+elif month ==9:
+    print("September",year, "has 31 days.")
+elif month ==10:
+    print("October",year, "has 30 days.")
+elif month ==11:
+    print("November",year, "has 31 days.")
+elif month ==12:
+    print("December",year, "has 30 days.")
+    
+"""*4.17 (Game: scissor, rock, paper) Write a program that plays the popular scissor-rockpaper
+game. (A scissor can cut a paper, a rock can knock a scissor, and a paper can
+wrap a rock.) The program randomly generates a number 0, 1, or 2 representing
+scissor, rock, and paper. The program prompts the user to enter a number 0, 1, or
+2 and displays a message indicating whether the user or the computer wins, loses,
+or draws. Here are sample runs:
+scissor (0), rock (1), paper (2):
+"""
+
+import random
+
+user = eval(input("scissor (0), rock (1), paper (2):"))
+randnum= random.randint(0, 2)
+print("Randnum ",randnum)
+
+if randnum == 0 and user ==0:
+    print("Draws")
+elif randnum == 0 and user == 1:
+    print("You Won!")
+elif randnum ==0 and user==2:
+    print("Computer Won!")
+elif randnum == 1 and user == 0:
+    print("Computer Won!")
+elif randnum ==1 and user==1:
+    print("Draw!")
+elif randnum == 1 and user==2:
+    print("You Won!")
+elif randnum ==2 and user ==0:
+    print(" You Won!")
+elif randnum == 2 and user == 1:
+    print("You Won!")
+elif randnum ==2 and user==2:
+    print("Draw!")
+             
+"""
+Washera Academy
+"""
